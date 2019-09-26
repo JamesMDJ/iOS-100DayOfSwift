@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="Project23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwx-rp-sLe">
+                                <rect key="frame" x="162" y="522.5" width="90" height="30"/>
+                                <state key="normal" title="Change Date"/>
+                                <connections>
+                                    <segue destination="b1I-jI-gPQ" kind="show" id="PRm-lk-JuQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pP-XL-Nlc">
+                                <rect key="frame" x="189" y="437.5" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jwx-rp-sLe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="6/5" id="3iJ-7d-ZPj"/>
+                            <constraint firstItem="5pP-XL-Nlc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nq3-Yc-5wC"/>
+                            <constraint firstItem="jwx-rp-sLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aWa-Aj-efA"/>
+                            <constraint firstItem="5pP-XL-Nlc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yN1-wT-w6Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="5pP-XL-Nlc" id="V3k-2L-d9u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="100"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="C6K-st-kRu">
+            <objects>
+                <viewController id="b1I-jI-gPQ" customClass="DateViewController" customModule="Project23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Se2-6B-cXS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fx-wI-xg9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Set Date and Time" id="fyY-Oc-jTN">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="651-TU-BXk">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="rcG-oz-0AY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Bdn-Pi-imY">
+                                            <connections>
+                                                <action selector="doneOnClick:" destination="b1I-jI-gPQ" id="Eml-o9-vJs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juq-Sy-hlJ">
+                                <rect key="frame" x="173.5" y="124" width="67.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yBh-bO-7hR">
+                                <rect key="frame" x="47" y="489.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="583919429.98946297">
+                                    <!--2019-07-04 07:50:29 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timeValueChange:" destination="b1I-jI-gPQ" eventType="valueChanged" id="G7G-HU-QFP"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="U02-Hc-lcC">
+                                <rect key="frame" x="47" y="228" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="583919436.17526603">
+                                    <!--2019-07-04 07:50:36 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateValueChange:" destination="b1I-jI-gPQ" eventType="valueChanged" id="AIX-8x-ttC"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U02-Hc-lcC" firstAttribute="centerX" secondItem="Se2-6B-cXS" secondAttribute="centerX" id="0Tc-KP-aOU"/>
+                            <constraint firstItem="yBh-bO-7hR" firstAttribute="centerX" secondItem="Se2-6B-cXS" secondAttribute="centerX" id="4xP-og-YAq"/>
+                            <constraint firstItem="juq-Sy-hlJ" firstAttribute="centerX" secondItem="Se2-6B-cXS" secondAttribute="centerX" id="5Xc-JX-WFO"/>
+                            <constraint firstItem="juq-Sy-hlJ" firstAttribute="centerY" secondItem="Se2-6B-cXS" secondAttribute="centerY" multiplier="3/10" id="8P3-XG-NP7"/>
+                            <constraint firstItem="U02-Hc-lcC" firstAttribute="centerY" secondItem="Se2-6B-cXS" secondAttribute="centerY" multiplier="3/4" id="EBn-Dz-0SS"/>
+                            <constraint firstItem="yBh-bO-7hR" firstAttribute="centerY" secondItem="Se2-6B-cXS" secondAttribute="centerY" multiplier="4/3" id="j1R-H2-Zoa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cwh-zj-KRB"/>
+                    </view>
+                    <connections>
+                        <outlet property="nowLabel" destination="juq-Sy-hlJ" id="rxt-Uf-vNj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2I0-lX-p62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="100"/>
+        </scene>
+    </scenes>
+</document>

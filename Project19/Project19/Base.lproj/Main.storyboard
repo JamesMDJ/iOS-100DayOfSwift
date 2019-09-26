@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqU-Nn-38k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="New Entry" id="QGz-hg-9Bb">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RpI-g4-lHd">
+                                            <color key="tintColor" red="0.22858294356429687" green="0.59244130710659904" blue="0.34481732857749958" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="C9w-ty-bv8">
+                                            <color key="tintColor" red="0.2285829436" green="0.59244130709999998" blue="0.34481732859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE9-f5-oz0">
+                                <rect key="frame" x="0.0" y="98" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-Ai-UiJ">
+                                <rect key="frame" x="0.0" y="128.5" width="414" height="733.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Test" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nak-td-yG9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="733.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BKb-Ai-UiJ" secondAttribute="trailing" id="FJv-ia-KJJ"/>
+                            <constraint firstItem="jqU-Nn-38k" firstAttribute="trailing" secondItem="kE9-f5-oz0" secondAttribute="trailing" id="Fgf-xK-qPB"/>
+                            <constraint firstItem="jqU-Nn-38k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ks0-OG-hJo"/>
+                            <constraint firstItem="kE9-f5-oz0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nsp-Km-wq3"/>
+                            <constraint firstItem="BKb-Ai-UiJ" firstAttribute="top" secondItem="kE9-f5-oz0" secondAttribute="bottom" constant="10" id="WWH-0p-hXg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BKb-Ai-UiJ" secondAttribute="bottom" id="ddM-VG-zlC"/>
+                            <constraint firstItem="kE9-f5-oz0" firstAttribute="top" secondItem="jqU-Nn-38k" secondAttribute="bottom" constant="10" id="iTe-Hg-UdP"/>
+                            <constraint firstItem="jqU-Nn-38k" firstAttribute="leading" secondItem="kE9-f5-oz0" secondAttribute="leading" id="ky8-pj-FFe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kE9-f5-oz0" secondAttribute="trailing" id="rgg-hT-wIs"/>
+                            <constraint firstItem="BKb-Ai-UiJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vzf-ub-o5z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="kE9-f5-oz0" id="G0f-qa-LMP"/>
+                        <outlet property="toolbar" destination="qtz-3Y-CwC" id="S8v-2N-m46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qtz-3Y-CwC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Item" systemItem="camera" id="J7N-fM-tvU">
+                            <color key="tintColor" red="0.0" green="0.59936179577464788" blue="0.43172315140845069" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3ms-NY-uRp"/>
+                        <barButtonItem title="Item" image="share" id="V6N-nT-efJ">
+                            <color key="tintColor" red="0.2285829436" green="0.59244130709999998" blue="0.34481732859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="share" width="24" height="24"/>
+    </resources>
+</document>

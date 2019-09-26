@@ -1,0 +1,16 @@
+PODS:
+  - CBZSplashView (1.0.0)
+
+DEPENDENCIES:
+  - CBZSplashView (~> 1.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CBZSplashView
+
+SPEC CHECKSUMS:
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
+
+PODFILE CHECKSUM: 16c4d96fba608c5e2a442cd3abf8500b0ef67043
+
+COCOAPODS: 1.7.4

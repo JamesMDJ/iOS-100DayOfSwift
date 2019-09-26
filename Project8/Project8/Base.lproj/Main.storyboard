@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTq-0d-hMP">
+                                <rect key="frame" x="7" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="Oqb-UY-UUg">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="reply" id="alC-JQ-d80"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="0PL-bR-B9e"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UGE-TH-YWQ">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="The quick brown fox jumps over the lazy dog." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="si0-Hm-f7Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="774"/>
+                                        <gestureRecognizers/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nAr-xX-v9t" appends="YES" id="jmj-ai-wKh"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zTq-0d-hMP" secondAttribute="trailing" constant="-27" id="DmM-gb-9rf"/>
+                            <constraint firstItem="zTq-0d-hMP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="Dof-nE-xej"/>
+                            <constraint firstItem="zTq-0d-hMP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fzj-zq-8AZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UGE-TH-YWQ" secondAttribute="bottom" id="k84-RV-dWv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGE-TH-YWQ" secondAttribute="trailing" constant="20" id="qiY-HY-g9D"/>
+                            <constraint firstItem="UGE-TH-YWQ" firstAttribute="top" secondItem="zTq-0d-hMP" secondAttribute="bottom" id="uDR-PB-TIc"/>
+                            <constraint firstItem="UGE-TH-YWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ujp-5P-PKu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="nAr-xX-v9t">
+                    <connections>
+                        <action selector="swipeDownDismissKeyboard:" destination="BYZ-38-t0r" id="i1V-72-Opm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
